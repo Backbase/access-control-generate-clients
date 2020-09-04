@@ -1,0 +1,24 @@
+<execution>
+  <id>legalentity-presentation-spec</id>
+  <phase>generate-sources</phase>
+  <goals>
+    <goal>raml-api-generator</goal>
+  </goals>
+  <configuration>
+    <inputSpec>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control-spec</artifactId>
+      <version>${access-control-spec.version}</version>
+      <inputFiles>
+        <inputFile>legalentity-presentation-spec/api.raml</inputFile>
+        <inputFile>legalentity-presentation-spec/service-api.raml</inputFile>
+      </inputFiles>
+    </inputSpec>
+    <outputFile>target/generated-sources</outputFile>
+    <serviceId>access-control</serviceId>
+    <packageName>presentation.legalentity</packageName>
+    <basePackageName>com.backbase</basePackageName>
+    <generateApi>false</generateApi>
+    <generateClients>true</generateClients>
+  </configuration>
+</execution>

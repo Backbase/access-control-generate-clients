@@ -1,0 +1,25 @@
+<execution>
+  <id>accessgroup-presentation-spec</id>
+  <phase>generate-sources</phase>
+  <goals>
+    <goal>raml-api-generator</goal>
+  </goals>
+  <configuration>
+    <includeBindingResult>false</includeBindingResult>
+    <inputSpec>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control-spec</artifactId>
+      <version>${access-control-spec.version}</version>
+      <inputFiles>
+        <inputFile>accessgroup-presentation-spec/api.raml</inputFile>
+        <inputFile>accessgroup-presentation-spec/service-api.raml</inputFile>
+      </inputFiles>
+    </inputSpec>
+    <outputFile>target/generated-sources</outputFile>
+    <serviceId>access-control</serviceId>
+    <packageName>presentation.accessgroup</packageName>
+    <basePackageName>com.backbase</basePackageName>
+    <generateApi>false</generateApi>
+    <generateClients>true</generateClients>
+  </configuration>
+</execution>
